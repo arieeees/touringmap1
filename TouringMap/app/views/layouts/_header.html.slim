@@ -1,0 +1,11 @@
+.container
+    div#loginheader
+        div#header
+            - if user_signed_in?
+                | AAAAAA
+            - else
+                = link_to new_user_session_path do
+                button.btn
+                | ログイン
+        div.sidebar
+                |aaaaaa
