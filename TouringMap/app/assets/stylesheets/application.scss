@@ -25,7 +25,31 @@ body {
   font-family: 'marumonica';
   background-color: #BFBFBF;
   color: #B7EB21;
+  height: 800px;
 }
-header {
-  background-coler: #646464; 
+
+.header {
+  background-color: #646464;
+  height: 70px;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #646464;
+  width: 70px;
+}
+
+.main {
+  background-color: #FFFFFF;
+  height: 700px;
+  width: 95%;
+}
+
+
+.footer {
+  
+}
+
+.logo {
+  font-size: 40px;
 }

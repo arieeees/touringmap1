@@ -1,11 +1,9 @@
-.container
-    div#loginheader
-        div#header
+.row.header.d-flex.justify-content-between
+        .col-3.border
+                div.logo.mx-1
+                        = link_to 'TouringMap', root_path
+        .col-2.border
             - if user_signed_in?
                 | AAAAAA
             - else
-                = link_to new_user_session_path do
-                button.btn
-                | ログイン
-        div.sidebar
-                |aaaaaa
+                = link_to 'ログイン', new_user_session_path

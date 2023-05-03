@@ -1,7 +1,10 @@
 doctype html
 html
   head
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"
+    link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet"
+
     meta[charset="UTF-8"]
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -10,8 +13,13 @@ html
     title
       | TouringMap
   body
-    div.header
-    = render 'layouts/header'
-    div.main
-      = yield
-    div.footer
+    .container-fluid
+      .row
+        = render 'layouts/header'
+      .row
+        .col-1.sidebar
+          = render 'layouts/sidebar'
+        .col-11.pt-3.pl-4.main
+          = yield
+      .row
+        = render 'layouts/footer'
